@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Magic Monkey Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+        
+        body {
+            font-family: 'Pixelify Sans', sans-serif;
+            background-color: #FFF9E6;
+        }
+        
+        .jungle-bg {
+            background-image: url('https://images.unsplash.com/photo-1541410965313-d53b3c16ef17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(173, 216, 230, 0.3);
+        }
+        
+        .banana-text {
+            color: #FFD700;
+            text-shadow: 2px 2px 0 #DAA520;
+        }
+        
+        .monkey-yellow {
+            background-color: #FFD166;
+        }
+        
+        .monkey-blue {
+            background-color: #118AB2;
+        }
+        
+        .monkey-dark-blue {
+            background-color: #073B4C;
+        }
+        
+        .wiggle {
+            animation: wiggle 2s infinite;
+        }
+        
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="jungle-bg min-h-screen">
+    <!-- Navigation -->
+    <nav class="monkey-dark-blue text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-paw text-2xl monkey-yellow p-2 rounded-full"></i>
+                <h1 class="text-2xl font-bold">Magic Monkey Project</h1>
+            </div>
+            <div class="hidden md:flex space-x-6 text-lg">
+                <a href="#about" class="hover:text-yellow-300 transition">About</a>
+                <a href="#mission" class="hover:text-yellow-300 transition">Mission</a>
+                <a href="#join" class="hover:text-yellow-300 transition">Join</a>
+                <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+            </div>
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-4 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <div class="inline-block mb-8 wiggle">
+                <img src="https://i.imgur.com/JQ8W5VK.png" alt="Marvin the Magic Monkey" class="w-48 h-48 object-contain mx-auto">
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 banana-text">Welcome to the Jungle! <span class="monkey-blue text-white px-4 rounded-lg">🐒🌴🪄💙</span></h1>
+            <p class="text-xl md:text-2xl mb-8 font-semibold text-gray-800 bg-white bg-opacity-70 p-4 rounded-lg">Join Marvin, the best Magic Monkey in all of Bananaville 🍌</p>
+            <button class="monkey-yellow hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-full text-lg transition transform hover:scale-105 shadow-lg">
+                Join the Adventure!
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-white bg-opacity-80">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold mb-8 text-center monkey-blue text-white p-2 rounded-lg">Meet Marvin the Magic Monkey</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2 bounce">
+                    <img src="https://i.imgur.com/JQ8W5VK.png" alt="Marvin the Magic Monkey" class="w-full max-w-xs mx-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg mb-4">Marvin is the bravest, most magical monkey in all of Bananaville! With his trusty medical bag and endless supply of banana band-aids, he's on a mission to keep the jungle healthy and happy.</p>
+                    <p class="text-lg mb-4">But there's trouble in paradise! Winston the Wicked Wolf has been poisoning the bananas, causing all sorts of health problems for Marvin's monkey friends.</p>
+                    <div class="monkey-blue text-white p-4 rounded-lg">
+                        <p class="font-bold mb-2">🐒 Did you know?</p>
+                        <p>Poisoned bananas can cause cancer, immune diseases, and cardiovascular diseases in monkeys! That's why Marvin needs your help!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-16 px-4 monkey-dark-blue text-white">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold mb-8 text-center monkey-yellow text-gray-900 p-2 rounded-lg">Our Mission</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg">
+                    <div class="text-4xl mb-4 monkey-yellow text-gray-900 w-16 h-16 rounded-full flex items-center justify-center">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Save the Monkeys</h3>
+                    <p>Marvin delivers medical supplies to monkeys in need across the jungle. From banana band-aids to coconut casts, he's got just what they need!</p>
+                </div>
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg">
+                    <div class="text-4xl mb-4 monkey-yellow text-gray-900 w-16 h-16 rounded-full flex items-center justify-center">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Stop Poisoned Bananas</h3>
+                    <p>Winston the Wicked Wolf must be stopped! We teach monkeys how to identify poisoned bananas and find safe alternatives.</p>
+                </div>
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg">
+                    <div class="text-4xl mb-4 monkey-yellow text-gray-900 w-16 h-16 rounded-full flex items-center justify-center">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Educate Young Monkeys</h3>
+                    <p>Through fun, interactive learning, we're building a generation that understands, advocates, and cares for their health.</p>
+                </div>
+                <div class="bg-white bg-opacity-20 p-6 rounded-lg">
+                    <div class="text-4xl mb-4 monkey-yellow text-gray-900 w-16 h-16 rounded-full flex items-center justify-center">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Build Community</h3>
+                    <p>Together, we can create a healthier jungle for all monkeys. Join our troop today!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="py-16 px-4 bg-white bg-opacity-80">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-4xl font-bold mb-8 monkey-blue text-white p-2 rounded-lg inline-block">Join the Magic Monkey Movement!</h2>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-yellow-100 p-6 rounded-lg border-2 border-yellow-300 transform hover:scale-105 transition">
+                    <div class="text-5xl mb-4 monkey-blue text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">For Kids</h3>
+                    <p class="mb-4">Fun games and activities to learn about health and spot early warning signs!</p>
+                    <button class="monkey-blue hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-full text-sm transition">
+                        Play Now!
+                    </button>
+                </div>
+                <div class="bg-blue-100 p-6 rounded-lg border-2 border-blue-300 transform hover:scale-105 transition">
+                    <div class="text-5xl mb-4 monkey-yellow text-gray-900 w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">For Teens</h3>
+                    <p class="mb-4">Interactive learning modules about health advocacy and prevention.</p>
+                    <button class="monkey-yellow hover:bg-yellow-500 text-gray-900 font-bold py-2 px-6 rounded-full text-sm transition">
+                        Learn More!
+                    </button>
+                </div>
+                <div class="bg-green-100 p-6 rounded-lg border-2 border-green-300 transform hover:scale-105 transition">
+                    <div class="text-5xl mb-4 monkey-dark-blue text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">For Adults</h3>
+                    <p class="mb-4">Resources to help teach the next generation about health awareness.</p>
+                    <button class="monkey-dark-blue hover:bg-gray-800 text-white font-bold py-2 px-6 rounded-full text-sm transition">
+                        Get Resources!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Winston Warning -->
+    <section class="py-16 px-4 bg-red-100">
+        <div class="container mx-auto max-w-4xl text-center">
+            <div class="inline-block mb-8">
+                <img src="https://i.imgur.com/XYZ1234.png" alt="Winston the Wicked Wolf" class="w-32 h-32 object-contain mx-auto rounded-full border-4 border-red-500">
+            </div>
+            <h2 class="text-4xl font-bold mb-6 text-red-600">Beware of Winston the Wicked Wolf!</h2>
+            <p class="text-xl mb-8">He's poisoning bananas throughout the jungle, causing:</p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <i class="fas fa-procedures text-4xl text-red-500 mb-3"></i>
+                    <p class="font-bold">Cancer</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <i class="fas fa-shield-virus text-4xl text-red-500 mb-3"></i>
+                    <p class="font-bold">Immune Diseases</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <i class="fas fa-heartbeat text-4xl text-red-500 mb-3"></i>
+                    <p class="font-bold">Cardiovascular Diseases</p>
+                </div>
+            </div>
+            <button class="mt-8 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition transform hover:scale-105 shadow-lg">
+                Help Marvin Fight Back!
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 monkey-blue text-white">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold mb-8 text-center monkey-yellow text-gray-900 p-2 rounded-lg inline-block">Contact the Magic Monkey Team</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <p class="text-xl mb-6">Have questions about Marvin's mission? Want to help save the monkeys of Bananaville? Swing by our treehouse or send us a message!</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-2xl mr-4 monkey-yellow text-gray-900 w-12 h-12 rounded-full flex items-center justify-center"></i>
+                            <p>123 Banana Grove, Bananaville Jungle</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-2xl mr-4 monkey-yellow text-gray-900 w-12 h-12 rounded-full flex items-center justify-center"></i>
+                            <p>(555) 123-4567</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-2xl mr-4 monkey-yellow text-gray-900 w-12 h-12 rounded-full flex items-center justify-center"></i>
+                            <p>help@magicmonkeyproject.org</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex space-x-4 justify-center md:justify-start">
+                        <a href="#" class="monkey-yellow text-gray-900 w-12 h-12 rounded-full flex items-center justify-center text-2xl hover:bg-yellow-500 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="monkey-yellow text-gray-900 w-12 h-12 rounded-full flex items-center justify-center text-2xl hover:bg-yellow-500 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="monkey-yellow text-gray-900 w-12 h-12 rounded-full flex items-center justify-center text-2xl hover:bg-yellow-500 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="monkey-yellow text-gray-900 w-12 h-12 rounded-full flex items-center justify-center text-2xl hover:bg-yellow-500 transition">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="bg-white bg-opacity-20 p-6 rounded-lg">
+                        <div class="mb-4">
+                            <input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-white bg-opacity-70 text-gray-900 placeholder-gray-600">
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" placeholder="Your Email" class="w-full p-3 rounded bg-white bg-opacity-70 text-gray-900 placeholder-gray-600">
+                        </div>
+                        <div class="mb-4">
+                            <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded bg-white bg-opacity-70 text-gray-900 placeholder-gray-600"></textarea>
+                        </div>
+                        <button type="submit" class="monkey-yellow hover:bg-yellow-500 text-gray-900 font-bold py-3 px-6 rounded-full w-full transition transform hover:scale-105">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="monkey-dark-blue text-white py-8 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-paw text-2xl monkey-yellow p-2 rounded-full"></i>
+                        <h2 class="text-xl font-bold">Magic Monkey Project</h2>
+                    </div>
+                    <p class="text-sm mt-2">Empowering kids and teens through health education</p>
+                </div>
+                <div class="flex space-x-6 text-lg">
+                    <a href="#" class="hover:text-yellow-300 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-yellow-300 transition">Terms of Service</a>
+                    <a href="#" class="hover:text-yellow-300 transition">FAQ</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-sm">
+                <p>© 2023 The Magic Monkey Project. All rights reserved. 🐒🍌💛</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('button').addEventListener('click', function() {
+            const menu = document.querySelector('.md\\:flex');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            menu.classList.toggle('flex-col');
+            menu.classList.toggle('absolute');
+            menu.classList.toggle('top-16');
+            menu.classList.toggle('right-4');
+            menu.classList.toggle('bg-gray-800');
+            menu.classList.toggle('p-4');
+            menu.classList.toggle('rounded-lg');
+            menu.classList.toggle('space-y-4');
+            menu.classList.toggle('space-x-0');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
